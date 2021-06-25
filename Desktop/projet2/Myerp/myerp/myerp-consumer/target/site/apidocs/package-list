@@ -1,0 +1,8 @@
+com.dummy.myerp.consumer
+com.dummy.myerp.consumer.dao.contrat
+com.dummy.myerp.consumer.dao.impl
+com.dummy.myerp.consumer.dao.impl.cache
+com.dummy.myerp.consumer.dao.impl.db.dao
+com.dummy.myerp.consumer.dao.impl.db.rowmapper.comptabilite
+com.dummy.myerp.consumer.db
+com.dummy.myerp.consumer.db.helper

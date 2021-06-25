@@ -1,0 +1,16 @@
+com.dummy.myerp.business.contrat
+com.dummy.myerp.business.contrat.manager
+com.dummy.myerp.business.impl
+com.dummy.myerp.business.impl.manager
+com.dummy.myerp.consumer
+com.dummy.myerp.consumer.dao.contrat
+com.dummy.myerp.consumer.dao.impl
+com.dummy.myerp.consumer.dao.impl.cache
+com.dummy.myerp.consumer.dao.impl.db.dao
+com.dummy.myerp.consumer.dao.impl.db.rowmapper.comptabilite
+com.dummy.myerp.consumer.db
+com.dummy.myerp.consumer.db.helper
+com.dummy.myerp.model.bean.comptabilite
+com.dummy.myerp.model.validation.constraint
+com.dummy.myerp.technical.exception
+com.dummy.myerp.technical.util.spring
