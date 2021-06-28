@@ -1,0 +1,685 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ComptabiliteManagerImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">myerp-business</a> &gt; <a href="index.source.html" class="el_package">com.dummy.myerp.business.impl.manager</a> &gt; <span class="el_source">ComptabiliteManagerImpl.java</span></div><h1>ComptabiliteManagerImpl.java</h1><pre class="source lang-java linenums">package com.dummy.myerp.business.impl.manager;
+
+import java.math.BigDecimal;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Set;
+
+import javax.validation.ConstraintViolation;
+import javax.validation.ConstraintViolationException;
+
+import org.apache.commons.lang3.ObjectUtils;
+import org.apache.commons.lang3.StringUtils;
+import org.springframework.transaction.TransactionStatus;
+
+import com.dummy.myerp.business.contrat.manager.ComptabiliteManager;
+import com.dummy.myerp.business.impl.AbstractBusinessManager;
+import com.dummy.myerp.model.bean.comptabilite.CompteComptable;
+import com.dummy.myerp.model.bean.comptabilite.EcritureComptable;
+import com.dummy.myerp.model.bean.comptabilite.JournalComptable;
+import com.dummy.myerp.model.bean.comptabilite.LigneEcritureComptable;
+import com.dummy.myerp.model.bean.comptabilite.SequenceEcritureComptable;
+import com.dummy.myerp.technical.exception.FunctionalException;
+import com.dummy.myerp.technical.exception.NotFoundException;
+import com.dummy.myerp.technical.exception.TechnicalException;
+
+/**
+ * Comptabilite manager implementation.
+ */
+public class ComptabiliteManagerImpl extends AbstractBusinessManager implements ComptabiliteManager {
+
+	// ==================== Attributs ====================
+	/**
+	 * the max reference number size
+	 */
+	private final static String REFERENCE_NUMBER_SIZE = &quot;5&quot;;
+	private SequenceEcritureComptable vSequenceEcritureComptable;
+
+	// ==================== Constructeurs ====================
+	/**
+	 * Instantiates a new Comptabilite manager.
+	 */
+<span class="fc" id="L46">	public ComptabiliteManagerImpl() {</span>
+<span class="fc" id="L47">	}</span>
+
+	// ==================== Getters/Setters ====================
+
+	@Override
+	public List&lt;CompteComptable&gt; getListCompteComptable() {
+<span class="fc" id="L53">		return getDaoProxy().getComptabiliteDao().getListCompteComptable();</span>
+	}
+
+	// TODO added to allow mockito testing
+	public SequenceEcritureComptable getvSequenceEcritureComptable() {
+<span class="fc" id="L58">		return vSequenceEcritureComptable;</span>
+	}
+
+	// TODO added to allow mockito testing
+	public void setvSequenceEcritureComptable(SequenceEcritureComptable vSequenceEcritureComptable) {
+<span class="fc" id="L63">		this.vSequenceEcritureComptable = vSequenceEcritureComptable;</span>
+<span class="fc" id="L64">	}</span>
+
+	// TODO added to allow mockito testing
+	public void setvSequenceEcritureComptable(String pJournalCode, Integer pAnnee) throws NotFoundException {
+<span class="fc" id="L68">		this.vSequenceEcritureComptable = getSequenceEcritureComptable(pJournalCode, pAnnee);</span>
+<span class="fc" id="L69">	}</span>
+
+	@Override
+	public List&lt;JournalComptable&gt; getListJournalComptable() {
+<span class="fc" id="L73">		List&lt;JournalComptable&gt; list = getDaoProxy().getComptabiliteDao().getListJournalComptable();</span>
+<span class="fc" id="L74">		return list;</span>
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public List&lt;EcritureComptable&gt; getListEcritureComptable() {
+<span class="fc" id="L82">		return getDaoProxy().getComptabiliteDao().getListEcritureComptable();</span>
+	}
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * @throws NotFoundException if SequenceEcritureComptable not found note expected behaviour
+	 * @throws FunctionalException if Reference not respect RG_Compta_0
+	 */
+	// FIXME à tester done
+	// TODO add to report
+	@Override
+	public synchronized void addReference(EcritureComptable pEcritureComptable)
+			throws NotFoundException, FunctionalException {
+		// FIXME à implémenter done delet this comment
+<span class="fc" id="L97">		checkJournalComptable(pEcritureComptable, getListJournalComptable());</span>
+		try {
+<span class="fc" id="L99">			this.setvSequenceEcritureComptable(pEcritureComptable.getJournal().getCode(), getYear(pEcritureComptable));</span>
+<span class="fc" id="L100">			this.setvSequenceEcritureComptable(</span>
+<span class="fc" id="L101">					this.addTheNewLastValueToSequenceEcritureComptable(getvSequenceEcritureComptable()));</span>
+<span class="fc" id="L102">			this.updateSequenceEcritureComptable(this.getvSequenceEcritureComptable());</span>
+<span class="fc" id="L103">			this.setEcritureComptableReference(pEcritureComptable, this.getvSequenceEcritureComptable());</span>
+<span class="fc" id="L104">		} catch (NotFoundException e) {</span>
+<span class="fc" id="L105">			this.setvSequenceEcritureComptable(this.createSequenceEcritureComptable(pEcritureComptable, 1));</span>
+<span class="fc" id="L106">			this.insertSequenceEcritureComptable(this.getvSequenceEcritureComptable());</span>
+<span class="fc" id="L107">			this.setEcritureComptableReference(pEcritureComptable, this.getvSequenceEcritureComptable());</span>
+<span class="fc" id="L108">		}</span>
+
+<span class="fc" id="L110">	}</span>
+
+	// FIXME delete this comment
+	// Bien se réferer à la JavaDoc de cette méthode !
+	/*
+	 * Le principe : 1. Remonter depuis la persitance la dernière valeur de la
+	 * séquence du journal pour l'année de l'écriture (table
+	 * sequence_ecriture_comptable) 2. * S'il n'y a aucun enregistrement pour le
+	 * journal pour l'année concernée : 1. Utiliser le numéro 1. Sinon : 1. Utiliser
+	 * la dernière valeur + 1 3. Mettre à jour la référence de l'écriture avec la
+	 * référence calculée (RG_Compta_5) 4. Enregistrer (insert/update) la valeur de
+	 * la séquence en persitance (table sequence_ecriture_comptable)
+	 */
+
+	/**
+	 *
+	 * @param pSequenceEcritureComptable the SequenceEcritureComptable to update
+	 * @return pSequenceValueComptable updated with dernierValue +1
+	 */
+	protected SequenceEcritureComptable addTheNewLastValueToSequenceEcritureComptable(
+			SequenceEcritureComptable pSequenceEcritureComptable) {
+<span class="fc" id="L131">		pSequenceEcritureComptable.setDerniereValeur(pSequenceEcritureComptable.getDerniereValeur() + 1);</span>
+<span class="fc" id="L132">		return pSequenceEcritureComptable;</span>
+	}
+
+	/**
+	 *
+	 * @param pEcritureComptable        EcritureComptable containing useFull
+	 *                                  information
+	 * @param pNewSequenceStartingValue The starting value
+	 * @return new SequenceEcritureValue fill with information from
+	 *         pEcritureComptable and dernierValue = pNewSequenceStartingValue
+	 */
+	protected SequenceEcritureComptable createSequenceEcritureComptable(EcritureComptable pEcritureComptable,
+			Integer pNewSequenceStartingValue) {
+<span class="fc" id="L145">		SequenceEcritureComptable vSequenceEcritureComptable = new SequenceEcritureComptable();</span>
+<span class="fc" id="L146">		vSequenceEcritureComptable = new SequenceEcritureComptable(LocalDate.now().getYear(), pNewSequenceStartingValue,</span>
+<span class="fc" id="L147">				pEcritureComptable.getJournal());</span>
+<span class="fc" id="L148">		return vSequenceEcritureComptable;</span>
+	}
+
+	/**
+	 *
+	 * @param pEcritureComptable
+	 * @throws FunctionalException FunctionalException if reference number length &gt; 5
+	 */
+
+	/**
+	 *
+	 * @param pEcritureComptable the EcritureComptable where to set the reference
+	 * @param pSequenceEcritureComptable The SequenceEcritureComptable used to set the reference
+	 * @throws FunctionalException FunctionalException if reference number length &amp;gt; 5
+	 */
+	protected void setEcritureComptableReference(EcritureComptable pEcritureComptable,
+			SequenceEcritureComptable pSequenceEcritureComptable) throws FunctionalException {
+<span class="fc" id="L165">		pEcritureComptable.setReference(</span>
+<span class="fc" id="L166">				createEcritureComptableReference(pEcritureComptable, pSequenceEcritureComptable.getDerniereValeur()));</span>
+<span class="fc" id="L167">	}</span>
+
+	/**
+	 *
+	 * @param pEcritureComptable used to set the reference
+	 * @param pReferenceNumberValue the reference number to append
+	 * @return the reference as string with regex [A-Z]{1,5}-\d{4}/\d{5}
+	 * @throws FunctionalException FunctionalException if reference number length &amp;gt; 5
+	 */
+	protected String createEcritureComptableReference(EcritureComptable pEcritureComptable,
+			Integer pReferenceNumberValue) throws FunctionalException {
+<span class="fc" id="L178">		StringBuilder vStrB = new StringBuilder();</span>
+<span class="fc" id="L179">		vStrB.append(pEcritureComptable.getJournal().getCode()).append(&quot;-&quot;).append(getYear(pEcritureComptable))</span>
+<span class="fc" id="L180">				.append(&quot;/&quot;).append(referenceNumberFormat(REFERENCE_NUMBER_SIZE, pReferenceNumberValue));</span>
+<span class="fc" id="L181">		return vStrB.toString();</span>
+	}
+	/**
+	 *
+	 * @param pStringLenght max lenght of reference
+	 * @param pInteger the Integer to parse as formated String
+	 * @return the reference with 5 digits max completed with 0
+	 * @throws FunctionalException if reference number length &amp;gt; 5
+	 */
+	protected String referenceNumberFormat(String pStringLenght, Integer pInteger) throws FunctionalException {
+<span class="fc" id="L191">		String vReferenceNumber = String.format(&quot;%0&quot; + pStringLenght + &quot;d&quot;, pInteger);</span>
+<span class="fc bfc" id="L192" title="All 2 branches covered.">		if (vReferenceNumber.length() &gt; 5) {</span>
+<span class="fc" id="L193">			throw new FunctionalException(&quot; Le numéro de référence: [&quot; + vReferenceNumber + &quot;] et hors limites&quot;);</span>
+		}
+<span class="fc" id="L195">		return vReferenceNumber;</span>
+	}
+
+
+	// FIXME à tester DONE
+
+
+	@Override
+	public void checkEcritureComptable(EcritureComptable pEcritureComptable)
+			throws FunctionalException, NotFoundException {
+<span class="fc" id="L205">		this.checkEcritureComptableUnit(pEcritureComptable);</span>
+<span class="fc" id="L206">		this.checkEcritureComptableContext(pEcritureComptable);</span>
+<span class="fc" id="L207">		this.checkIsJournalAndCompteComptableExist(pEcritureComptable);</span>
+<span class="fc" id="L208">	}</span>
+
+	/**
+	 * Vérifie que l'Ecriture comptable respecte les règles de gestion unitaires,
+	 * c'est à dire indépendemment du contexte (unicité de la référence, exercie
+	 * comptable non cloturé...)
+	 *
+	 * @param pEcritureComptable -
+	 * @throws FunctionalException Si l'Ecriture comptable ne respecte pas les
+	 *                             règles de gestion
+	 */
+	// TODO tests à compléter
+	protected void checkEcritureComptableUnit(EcritureComptable pEcritureComptable) throws FunctionalException {
+
+<span class="fc" id="L222">		checkRGCompta0(pEcritureComptable);</span>
+		// ===== RG_Compta_2 : Pour qu'une écriture comptable soit valide, elle doit
+		// être équilibrée car il s'agit dun journal comptable (travail du comptable)
+<span class="fc" id="L225">		checkRGCompta2(pEcritureComptable);</span>
+		
+		// ===== RG_Compta_3 : une écriture comptable doit avoir au moins 2 lignes
+		// d'écriture (1 au débit, 1 au crédit)
+<span class="fc" id="L229">		checkRGCompta3(pEcritureComptable);</span>
+		
+		// FIXME ===== RG_Compta_5 : Format et contenu de la référence // DONE
+		// vérifier que l'année dans la référence correspond bien à la date de
+		// l'écriture, idem pour le code journal...
+<span class="fc" id="L234">		checkRGCompta5(pEcritureComptable);</span>
+		
+		// FIXME delete this comment all as been done
+		// ===== Vérification des contraintes unitaires sur les attributs de l'écriture
+		/*
+		 * Set&lt;ConstraintViolation&lt;EcritureComptable&gt;&gt; vViolations =
+		 * getConstraintValidator().validate(pEcritureComptable); if
+		 * (!vViolations.isEmpty()) { throw new
+		 * FunctionalException(&quot;L'écriture comptable ne respecte pas les règles de gestion.&quot;
+		 * , new ConstraintViolationException(
+		 * &quot;L'écriture comptable ne respecte pas les contraintes de validation&quot;,
+		 * vViolations)); }
+		 */
+
+		// ===== RG_Compta_2 : Pour qu'une écriture comptable soit valide, elle doit
+		// être équilibrée
+		/*
+		 * if (!pEcritureComptable.isEquilibree()) { throw new
+		 * FunctionalException(&quot;L'écriture comptable n'est pas équilibrée.&quot;); }
+		 */
+
+		// ===== RG_Compta_3 : une écriture comptable doit avoir au moins 2 lignes
+		// d'écriture (1 au débit, 1 au crédit)
+		/*
+		 * int vNbrCredit = 0; int vNbrDebit = 0; for (LigneEcritureComptable
+		 * vLigneEcritureComptable : pEcritureComptable.getListLigneEcriture()) { if
+		 * (BigDecimal.ZERO
+		 * .compareTo(ObjectUtils.defaultIfNull(vLigneEcritureComptable.getCredit(),
+		 * BigDecimal.ZERO)) != 0) { vNbrCredit++; } if (BigDecimal.ZERO
+		 * .compareTo(ObjectUtils.defaultIfNull(vLigneEcritureComptable.getDebit(),
+		 * BigDecimal.ZERO)) != 0) { vNbrDebit++; } }
+		 *
+		 *
+		 * // On test le nombre de lignes car si l'écriture à une seule ligne // avec un
+		 * montant au débit et un montant au crédit ce n'est pas valable if
+		 * (pEcritureComptable.getListLigneEcriture().size() &lt; 2 || vNbrCredit &lt; 1 ||
+		 * vNbrDebit &lt; 1) { throw new FunctionalException(
+		 * &quot;L'écriture comptable doit avoir au moins deux lignes : une ligne au débit et une ligne au crédit.&quot;
+		 * ); }
+		 */
+
+		// FIXME ===== RG_Compta_5 : Format et contenu de la référence // DONE
+		// vérifier que l'année dans la référence correspond bien à la date de
+		// l'écriture, idem pour le code journal...
+<span class="fc" id="L278">	}</span>
+
+	/**
+	 * Vérifie que l'Ecriture comptable respecte les règles de gestion liées au
+	 * contexte (unicité de la référence, année comptable non cloturé...)
+	 *
+	 * @param pEcritureComptable -
+	 * @throws FunctionalException Si l'Ecriture comptable ne respecte pas les
+	 *                             règles de gestion
+	 */
+	protected void checkEcritureComptableContext(EcritureComptable pEcritureComptable) throws FunctionalException {
+		// ===== RG_Compta_6 : La référence d'une écriture comptable doit être unique
+<span class="fc bfc" id="L290" title="All 2 branches covered.">		if (StringUtils.isNoneEmpty(pEcritureComptable.getReference())) {</span>
+			try {
+				// Recherche d'une écriture ayant la même référence
+<span class="fc" id="L293">				EcritureComptable vECRef = getDaoProxy().getComptabiliteDao()</span>
+<span class="fc" id="L294">						.getEcritureComptableByRef(pEcritureComptable.getReference());</span>
+
+				// Si l'écriture à vérifier est une nouvelle écriture (id == -1),
+				// ou si elle ne correspond pas à l'écriture trouvée (id != idECRef),
+				// c'est qu'il y a déjà une autre écriture avec la même référence
+				// FIXME modified pEcritureComptable.getId() == null to
+				// pEcritureComptable.getId() == -1 as per modification on EcritureComptable
+				// bean where default id is not null and value is -1 // DONE;
+<span class="fc bfc" id="L302" title="All 4 branches covered.">				if (pEcritureComptable.getId() == -1 || !pEcritureComptable.getId().equals(vECRef.getId())) {</span>
+<span class="fc" id="L303">					throw new FunctionalException(&quot;Une autre écriture comptable existe déjà avec la même référence.&quot;);</span>
+				}
+<span class="fc" id="L305">			} catch (NotFoundException vEx) {</span>
+				// Dans ce cas, c'est bon, ça veut dire qu'on n'a aucune autre écriture avec la
+				// même référence.
+<span class="fc" id="L308">			}</span>
+		}
+		// as the reference can be null no action on empty reference
+<span class="fc" id="L311">	}</span>
+
+
+
+	@Override
+	public void insertEcritureComptable(EcritureComptable pEcritureComptable)
+			throws FunctionalException, NotFoundException {
+  
+<span class="fc" id="L319">		this.addReference(pEcritureComptable);</span>
+<span class="fc" id="L320">		this.checkEcritureComptable(pEcritureComptable);</span>
+<span class="fc" id="L321">		TransactionStatus vTS = getTransactionManager().beginTransactionMyERP();</span>
+		try {
+<span class="fc" id="L323">			getDaoProxy().getComptabiliteDao().insertEcritureComptable(pEcritureComptable);</span>
+<span class="fc" id="L324">			getTransactionManager().commitMyERP(vTS);</span>
+<span class="fc" id="L325">			vTS = null;</span>
+		} finally {
+<span class="fc" id="L327">			getTransactionManager().rollbackMyERP(vTS);</span>
+		}
+<span class="fc" id="L329">	}</span>
+
+	// FIXME no check on EcritureComptable // corrected
+	/**
+	 * {@inheritDoc}
+	 *
+	 * @throws NotFoundException
+	 * @throws FunctionalException
+	 */
+	@Override
+	public void updateEcritureComptable(EcritureComptable pEcritureComptable)
+			throws FunctionalException, NotFoundException {
+		// after bean correction libelle can't be null, add this loop to avoid any issue
+		// on previous correction data in db.
+<span class="pc bpc" id="L343" title="1 of 2 branches missed.">		for (LigneEcritureComptable vLigneEcritureComptable : pEcritureComptable.getListLigneEcriture()) {</span>
+<span class="nc bnc" id="L344" title="All 2 branches missed.">			if (vLigneEcritureComptable.getLibelle() == null) {</span>
+<span class="nc" id="L345">				vLigneEcritureComptable.setLibelle(&quot;[ERROR] Please add a libelle it can't be empty&quot;);</span>
+			}
+<span class="nc" id="L347">		}</span>
+<span class="fc" id="L348">		this.checkEcritureComptableUnit(pEcritureComptable);</span>
+<span class="fc" id="L349">		this.checkEcritureComptableBeforeUpdate(pEcritureComptable);</span>
+<span class="fc" id="L350">		TransactionStatus vTS = getTransactionManager().beginTransactionMyERP();</span>
+		try {
+<span class="fc" id="L352">			getDaoProxy().getComptabiliteDao().updateEcritureComptable(pEcritureComptable);</span>
+<span class="fc" id="L353">			getTransactionManager().commitMyERP(vTS);</span>
+<span class="fc" id="L354">			vTS = null;</span>
+		} finally {
+<span class="fc" id="L356">			getTransactionManager().rollbackMyERP(vTS);</span>
+		}
+<span class="fc" id="L358">	}</span>
+
+//FIXME no check on EcritureComptable existence
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public void deleteEcritureComptable(Integer pId) {
+<span class="fc" id="L366">		TransactionStatus vTS = getTransactionManager().beginTransactionMyERP();</span>
+		try {
+<span class="fc" id="L368">			getDaoProxy().getComptabiliteDao().deleteEcritureComptable(pId);</span>
+<span class="fc" id="L369">			getTransactionManager().commitMyERP(vTS);</span>
+<span class="fc" id="L370">			vTS = null;</span>
+		} finally {
+<span class="fc" id="L372">			getTransactionManager().rollbackMyERP(vTS);</span>
+		}
+<span class="fc" id="L374">	}</span>
+
+	// ======== Refactoring =============
+	// TODO add to report all the following
+	/**
+	 *
+	 * @param pEcritureComptable the EcritreComptable to update
+	 * @throws FunctionalException RG_Compta failed
+	 * @throws NotFoundException   Not in DB error
+	 */
+	protected void checkEcritureComptableBeforeUpdate(EcritureComptable pEcritureComptable)
+			throws FunctionalException, NotFoundException {
+		//TODO check
+<span class="fc" id="L387">		this.checkEcritureComptableUnit(pEcritureComptable);</span>
+<span class="fc" id="L388">		this.checkIsJournalAndCompteComptableExist(pEcritureComptable);</span>
+
+<span class="fc" id="L390">	}</span>
+
+	// TODO add to report
+	// RG_Compta_0
+	/**
+	 * RG_Compta_0 bean constrain check
+	 *
+	 * @param pEcritureComptable the EcritureComptable to check
+	 * @throws FunctionalException if constrain are not respected RG_Compta 0
+	 */
+	protected void checkRGCompta0(EcritureComptable pEcritureComptable) throws FunctionalException {
+<span class="fc" id="L401">		Set&lt;ConstraintViolation&lt;EcritureComptable&gt;&gt; vViolations = getConstraintValidator().validate(pEcritureComptable);</span>
+<span class="fc bfc" id="L402" title="All 2 branches covered.">		if (!vViolations.isEmpty()) {</span>
+<span class="fc" id="L403">			throw new FunctionalException(&quot;L'écriture comptable ne respecte pas les règles de gestion.&quot;,</span>
+					new ConstraintViolationException(
+							&quot;L'écriture comptable ne respecte pas les contraintes de validation&quot;, vViolations));
+		}
+
+<span class="fc" id="L408">	}</span>
+	// TODO add to report
+
+	/**
+	 * RG_Compta_2 : Pour qu'une écriture comptable soit valide, elle doit être
+	 * équilibrée
+	 *
+	 * @param pEcritureComptable the EcritureComptable containing
+	 *                           LigneEcritureComptable
+	 * @throws FunctionalException if isEquilibree = False
+	 */
+	protected void checkRGCompta2(EcritureComptable pEcritureComptable) throws FunctionalException {
+
+<span class="fc bfc" id="L421" title="All 2 branches covered.">		if (!pEcritureComptable.isEquilibree()) {</span>
+<span class="fc" id="L422">			throw new FunctionalException(&quot;L'écriture comptable n'est pas équilibrée.&quot;);</span>
+		}
+<span class="fc" id="L424">	}</span>
+	// TODO add to report
+
+	/**
+	 * RG_Compta_3&lt;br&gt;
+	 * 1- Une écriture comptable doit contenir au moins deux lignes d'écriture : une
+	 * au débit et une au crédit.&lt;br&gt;
+	 * 2- une écriture comptable doit avoir au moins 2 lignes d'écriture (1 au
+	 * débit, 1 au crédit)
+	 *
+	 * @param pEcritureComptable EcritureComptable to check
+	 * @throws FunctionalException if pEcritureComptable.listLigneEcriture.size is
+	 *                             &amp;gt; 2
+	 */
+	protected void checkRGCompta3(EcritureComptable pEcritureComptable) throws FunctionalException {
+<span class="pc bpc" id="L439" title="1 of 4 branches missed.">		if (!isListLigneEcritureSizePass(pEcritureComptable) &amp;&amp; !atLeastOneDebitAndOneCredit(pEcritureComptable)) {</span>
+<span class="fc" id="L440">			throw new FunctionalException(</span>
+					&quot;L'écriture comptable doit avoir au moins deux lignes : une ligne au débit et une ligne au crédit.&quot;);
+		}
+<span class="fc" id="L443">	}</span>
+
+	/**
+	 * RG_Compta_3 : une écriture comptable doit avoir au moins 2 lignes d'écriture
+	 * (1 au débit, 1 au crédit)
+	 *
+	 * @param pEcritureComptable EcritureComptable to check
+	 * @return true if pEcritureComptable.listLigneEcriture.size is &amp;gt; 2
+	 */
+	protected Boolean isListLigneEcritureSizePass(EcritureComptable pEcritureComptable) {
+<span class="fc" id="L453">		Integer vSize = pEcritureComptable.getListLigneEcriture().size();</span>
+<span class="fc bfc" id="L454" title="All 2 branches covered.">		return vSize &gt;= 2;</span>
+	}
+
+	// ===== RG_Compta_3 : une écriture comptable doit avoir au moins 2 lignes
+	// d'écriture (1 au débit, 1 au crédit)
+	/**
+	 * RG_Compta_3 : une écriture comptable doit avoir au moins 2 lignes d'écriture
+	 * (1 au débit, 1 au crédit)
+	 *
+	 * @param pEcritureComptable The EcritureComptable to test
+	 * @return True if a least there is 1 debit value AND 1 credit value else False
+	 */
+	protected Boolean atLeastOneDebitAndOneCredit(EcritureComptable pEcritureComptable) {
+<span class="fc" id="L467">		int vNbrCredit = 0;</span>
+<span class="fc" id="L468">		int vNbrDebit = 0;</span>
+		// TODO added condition on not 0 sized list
+<span class="fc bfc" id="L470" title="All 2 branches covered.">		if (pEcritureComptable.getListLigneEcriture().size() != 0) {</span>
+
+<span class="fc bfc" id="L472" title="All 2 branches covered.">			for (LigneEcritureComptable vLigneEcritureComptable : pEcritureComptable.getListLigneEcriture()) {</span>
+<span class="fc bfc" id="L473" title="All 2 branches covered.">				if (BigDecimal.ZERO.compareTo(</span>
+<span class="fc" id="L474">						ObjectUtils.defaultIfNull(vLigneEcritureComptable.getCredit(), BigDecimal.ZERO)) != 0) {</span>
+<span class="fc" id="L475">					vNbrCredit++;</span>
+				}
+<span class="fc bfc" id="L477" title="All 2 branches covered.">				if (BigDecimal.ZERO.compareTo(</span>
+<span class="fc" id="L478">						ObjectUtils.defaultIfNull(vLigneEcritureComptable.getDebit(), BigDecimal.ZERO)) != 0) {</span>
+<span class="fc" id="L479">					vNbrDebit++;</span>
+				}
+<span class="fc" id="L481">			}</span>
+		}
+<span class="pc bpc" id="L483" title="1 of 4 branches missed.">		return vNbrCredit &gt;= 1 &amp;&amp; vNbrDebit &gt;= 1;</span>
+	}
+
+	protected void checkRGCompta5(EcritureComptable pEcritureComptable) throws FunctionalException {
+<span class="fc" id="L487">		String[] vToCompare = splittedEcritureComptableReference(pEcritureComptable);</span>
+<span class="fc bfc" id="L488" title="All 2 branches covered.">		if (!checkReferenceDate(pEcritureComptable, vToCompare[1])</span>
+<span class="fc bfc" id="L489" title="All 2 branches covered.">				|| !checkReferenceJournalCode(pEcritureComptable, vToCompare[0])) {</span>
+<span class="fc" id="L490">			throw new FunctionalException(</span>
+					&quot;La Référence de l'écriture comptable contien une erreur sur le code journal et/ou l'année.&quot;);
+		}
+<span class="fc" id="L493">	}</span>
+
+	protected Boolean checkReferenceDate(EcritureComptable pEcritureComptable, String pReferenceYear)
+			throws FunctionalException {
+<span class="fc" id="L497">		return String.valueOf(getYear(pEcritureComptable)).equals(pReferenceYear);</span>
+	}
+
+	protected Integer getYear(EcritureComptable pEcritureComptable) throws FunctionalException {
+<span class="fc" id="L501">		return Integer.parseInt(parseDateToString(pEcritureComptable.getDate()).split(&quot;[-]+&quot;)[0]);</span>
+	}
+
+	protected String parseDateToString(Date pDate) throws FunctionalException {
+<span class="fc bfc" id="L505" title="All 2 branches covered.">		if (pDate != null) {</span>
+<span class="fc" id="L506">			DateFormat dateFormat = new SimpleDateFormat(&quot;yyyy-mm-dd&quot;);</span>
+<span class="fc" id="L507">			String strDate = dateFormat.format(pDate);</span>
+<span class="fc" id="L508">			return strDate;</span>
+		} else {
+<span class="fc" id="L510">			throw new FunctionalException(&quot; La date est absente&quot;);</span>
+		}
+
+	}
+
+	protected Boolean checkReferenceJournalCode(EcritureComptable pEcritureComptable, String pReferenceJournalCode) {
+<span class="fc" id="L516">		return pReferenceJournalCode.equals(pEcritureComptable.getJournal().getCode());</span>
+	}
+
+	/**
+	 *
+	 * @param pEcritureComptable the EcritureComptable
+	 * @return EcritureComptable reference as String array with at index:&lt;br&gt;
+	 *         0: journal code&lt;br&gt;
+	 *         1: year&lt;br&gt;
+	 *         2: reference number
+	 */
+	protected String[] splittedEcritureComptableReference(EcritureComptable pEcritureComptable) {
+<span class="fc" id="L528">		String[] journalCodeSplit = pEcritureComptable.getReference().split(&quot;[-/]+&quot;);</span>
+<span class="fc" id="L529">		return journalCodeSplit;</span>
+	}
+
+	// TODO add chek on EcritureComptable id != -1 before insert
+	protected void checkEcritureComptableIdNotDefault(EcritureComptable pEcritureComptable) throws TechnicalException {
+<span class="fc bfc" id="L534" title="All 2 branches covered.">		if (pEcritureComptable.getId() == -1) {</span>
+<span class="fc" id="L535">			throw new TechnicalException(&quot;Valeur par defaut appliquée, erreur séquence&quot;);</span>
+		}
+<span class="fc" id="L537">	}</span>
+
+	public void checkIsJournalAndCompteComptableExist(EcritureComptable pEcritureComptable) throws NotFoundException {
+<span class="fc" id="L540">		List&lt;JournalComptable&gt; vJournalComptables = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L541">		List&lt;CompteComptable&gt; vCompteComptables = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L542">		vJournalComptables = this.getListJournalComptable();</span>
+<span class="fc" id="L543">		vCompteComptables = this.getListCompteComptable();</span>
+<span class="fc" id="L544">		checkJournalComptable(pEcritureComptable, vJournalComptables);</span>
+<span class="fc" id="L545">		checkCompteComptable(pEcritureComptable, vCompteComptables);</span>
+
+<span class="fc" id="L547">	}</span>
+
+	// TODO add check on code journal not null and check if found in db if not
+	// notfound exception
+	/**
+	 * {@link #isJournalComptableExist(EcritureComptable, List)}
+	 *
+	 * @param pEcritureComptable    EcritureComptable
+	 * @param pJournalComptableList is a list ofJournalComptable
+	 * @throws NotFoundException throws error message containing not found code
+	 *                           journal.
+	 */
+	protected void checkJournalComptable(EcritureComptable pEcritureComptable,
+			List&lt;JournalComptable&gt; pJournalComptableList) throws NotFoundException {
+<span class="fc" id="L561">		String vJournalComptableCode = isJournalComptableExist(pEcritureComptable, pJournalComptableList);</span>
+<span class="fc bfc" id="L562" title="All 2 branches covered.">		if (vJournalComptableCode != null) {</span>
+<span class="fc" id="L563">			throw new NotFoundException(&quot; Le journal comptable code : [&quot; + vJournalComptableCode + &quot;] n'existe pas&quot;);</span>
+		}
+
+<span class="fc" id="L566">	}</span>
+
+	/**
+	 *
+	 * @param pEcritureComptable    EcritureComptable
+	 * @param pJournalComptableList List &amp;lt;JournalComptable&amp;gt;
+	 * @return null if JournalComptable code exist in the list, the String value of
+	 *         the code if not.
+	 */
+	protected String isJournalComptableExist(EcritureComptable pEcritureComptable,
+			List&lt;JournalComptable&gt; pJournalComptableList) {
+<span class="fc" id="L577">		String vError = pEcritureComptable.getJournal().getCode();</span>
+<span class="fc bfc" id="L578" title="All 2 branches covered.">		if (JournalComptable.getByCode(pJournalComptableList, pEcritureComptable.getJournal().getCode()) == null) {</span>
+<span class="fc" id="L579">			return vError;</span>
+		}
+<span class="fc" id="L581">		return null;</span>
+	}
+
+	// TODO add check on code CompteComptable not null and check if found in db if
+	// not notfound exception
+	/**
+	 * {@link #isCompteComptableExist(EcritureComptable, List)}
+	 *
+	 * @param pEcritureComptable EcritureComptable.class
+	 * @param pCompteComptables  a list of CompteComptable;
+	 * @throws NotFoundException throws error message containing not found numero
+	 *                           CompteComptable.
+	 */
+	protected void checkCompteComptable(EcritureComptable pEcritureComptable, List&lt;CompteComptable&gt; pCompteComptables)
+			throws NotFoundException {
+<span class="fc" id="L596">		Integer vCompteComptableInError = isCompteComptableExist(pEcritureComptable, pCompteComptables);</span>
+<span class="fc bfc" id="L597" title="All 2 branches covered.">		if (vCompteComptableInError != null) {</span>
+<span class="fc" id="L598">			throw new NotFoundException(&quot; Le compte comptable numero : [&quot; + vCompteComptableInError + &quot;] n'existe pas&quot;);</span>
+		}
+<span class="fc" id="L600">	}</span>
+
+	/**
+	 *
+	 * @param pEcritureComptable EcritureComptable.class
+	 * @param pCompteComptables  List of CompteComptable
+	 * @return null if CompteComptable numero exist in the list, the Integer value
+	 *         of the numero if not.
+	 */
+	protected Integer isCompteComptableExist(EcritureComptable pEcritureComptable,
+			List&lt;CompteComptable&gt; pCompteComptables) {
+<span class="fc" id="L611">		Integer vError = null;</span>
+<span class="fc bfc" id="L612" title="All 2 branches covered.">		for (LigneEcritureComptable vLigneEcritureComptable : pEcritureComptable.getListLigneEcriture()) {</span>
+<span class="fc" id="L613">			Integer vCompteComptableNumero = vLigneEcritureComptable.getCompteComptable().getNumero();</span>
+<span class="fc bfc" id="L614" title="All 2 branches covered.">			if (CompteComptable.getByNumero(pCompteComptables, vCompteComptableNumero) == null) {</span>
+<span class="fc" id="L615">				return vError = vCompteComptableNumero;</span>
+			}
+<span class="fc" id="L617">		}</span>
+<span class="fc" id="L618">		return vError;</span>
+	}
+
+	/**
+	 *
+	 * @param pEcritureComptable the EcritureComptable to delete
+	 * @throws NotFoundException id EcritureComptable is not found
+	 */
+	public void checkIsEcritureComptableExist(EcritureComptable pEcritureComptable) throws NotFoundException {
+<span class="fc" id="L627">		List&lt;EcritureComptable&gt; vEcritureComptables = this.getListEcritureComptable();</span>
+<span class="fc" id="L628">		String vReference = isEcritureComptableExist(pEcritureComptable, vEcritureComptables);</span>
+<span class="fc bfc" id="L629" title="All 2 branches covered.">		if (vReference != null) {</span>
+<span class="fc" id="L630">			throw new NotFoundException(&quot; l'écriture comptable reference : [&quot; + vReference + &quot;] n'existe pas&quot;);</span>
+		}
+<span class="fc" id="L632">	}</span>
+
+	/**
+	 *
+	 * @param pEcritureComptable  the EcritureComptable to delete
+	 * @param pEcritureComptables the List of EcritureComptable wher to seek the one
+	 *                            to delete
+	 * @return the EcritureComptabel reference if not find else null
+	 */
+	protected String isEcritureComptableExist(EcritureComptable pEcritureComptable,
+			List&lt;EcritureComptable&gt; pEcritureComptables) {
+<span class="fc" id="L643">		Integer vSeekedId = pEcritureComptable.getId();</span>
+<span class="fc bfc" id="L644" title="All 2 branches covered.">		for (EcritureComptable vEcritureComptable : pEcritureComptables) {</span>
+<span class="fc bfc" id="L645" title="All 2 branches covered.">			if (vSeekedId == vEcritureComptable.getId()) {</span>
+<span class="fc" id="L646">				return null;</span>
+			}
+<span class="fc" id="L648">		}</span>
+<span class="fc" id="L649">		return pEcritureComptable.getReference();</span>
+	}
+
+	@Override
+	public SequenceEcritureComptable getSequenceEcritureComptable(String pJournalCode, Integer pAnnee)
+			throws NotFoundException {
+<span class="fc" id="L655">		return getDaoProxy().getComptabiliteDao().getSequenceEcritureComptable(pJournalCode, pAnnee);</span>
+	}
+
+	@Override
+	public void insertSequenceEcritureComptable(SequenceEcritureComptable pSequenceEcritureComptable) {
+<span class="fc" id="L660">		TransactionStatus vTS = getTransactionManager().beginTransactionMyERP();</span>
+		try {
+<span class="fc" id="L662">			getDaoProxy().getComptabiliteDao().insertSequenceEcritureComptable(pSequenceEcritureComptable);</span>
+<span class="fc" id="L663">			getTransactionManager().commitMyERP(vTS);</span>
+<span class="fc" id="L664">			vTS = null;</span>
+		} finally {
+<span class="fc" id="L666">			getTransactionManager().rollbackMyERP(vTS);</span>
+		}
+
+<span class="fc" id="L669">	}</span>
+
+	@Override
+	public void updateSequenceEcritureComptable(SequenceEcritureComptable pSequenceEcritureComptable) {
+<span class="fc" id="L673">		TransactionStatus vTS = getTransactionManager().beginTransactionMyERP();</span>
+		try {
+<span class="fc" id="L675">			getDaoProxy().getComptabiliteDao().updateSequenceEcritureComptable(pSequenceEcritureComptable);</span>
+<span class="fc" id="L676">			getTransactionManager().commitMyERP(vTS);</span>
+<span class="fc" id="L677">			vTS = null;</span>
+		} finally {
+<span class="fc" id="L679">			getTransactionManager().rollbackMyERP(vTS);</span>
+		}
+
+<span class="fc" id="L682">	}</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>
