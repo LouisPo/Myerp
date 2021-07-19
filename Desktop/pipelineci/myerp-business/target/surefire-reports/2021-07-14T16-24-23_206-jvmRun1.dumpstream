@@ -1,0 +1,905 @@
+# Created at 2021-07-14T16:24:43.152
+TestSet has not finished before stream error has appeared >> initializing exit by non-null configuration: null
+java.io.EOFException
+	at java.io.DataInputStream.readInt(DataInputStream.java:392)
+	at org.apache.maven.surefire.booter.MasterProcessCommand.decode(MasterProcessCommand.java:115)
+	at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:391)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+# Created at 2021-07-14T16:24:43.818
+Unexpected IOException: 1,1,org.apache.maven.surefire.junitplatform.JUnitPlatformProvider,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:43.912
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest$ComptabiliteManagerImplMockTestAddRefrenceTests,addreferenceFoundSequenceTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:51.143
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest$ComptabiliteManagerImplMockTestAddRefrenceTests,addreferenceFoundSequenceTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:51.148
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest$ComptabiliteManagerImplMockTestAddRefrenceTests,addreferenceNotFoundSequenceTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:51.186
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest$ComptabiliteManagerImplMockTestAddRefrenceTests,addreferenceNotFoundSequenceTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:51.208
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest$ComptabiliteManagerImplMockTestCheckEcritureComptablesTests,checkEcritureComptableContextNoDefaultIdAndNotEqualsTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:51.280
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest$ComptabiliteManagerImplMockTestCheckEcritureComptablesTests,checkEcritureComptableContextNoDefaultIdAndNotEqualsTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:51.283
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest$ComptabiliteManagerImplMockTestCheckEcritureComptablesTests,checkIsJournalAndCompteComptableExistJournalTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:51.291
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest$ComptabiliteManagerImplMockTestCheckEcritureComptablesTests,checkIsJournalAndCompteComptableExistJournalTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:51.292
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest$ComptabiliteManagerImplMockTestCheckEcritureComptablesTests,checkEcritureComptableBeforeUpdateNotFoundExceptionTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:51.302
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest$ComptabiliteManagerImplMockTestCheckEcritureComptablesTests,checkEcritureComptableBeforeUpdateNotFoundExceptionTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:51.306
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest$ComptabiliteManagerImplMockTestCheckEcritureComptablesTests,checkEcritureComptableBeforeUpdateTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:51.314
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest$ComptabiliteManagerImplMockTestCheckEcritureComptablesTests,checkEcritureComptableBeforeUpdateTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:51.316
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest$ComptabiliteManagerImplMockTestCheckEcritureComptablesTests,checkEcritureComptableContextNotFoundRefTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:51.322
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest$ComptabiliteManagerImplMockTestCheckEcritureComptablesTests,checkEcritureComptableContextNotFoundRefTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:51.328
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest$ComptabiliteManagerImplMockTestCheckEcritureComptablesTests,checkEcritureComptableCheckEcritureComptableUnitTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:51.339
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest$ComptabiliteManagerImplMockTestCheckEcritureComptablesTests,checkEcritureComptableCheckEcritureComptableUnitTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:51.342
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest$ComptabiliteManagerImplMockTestCheckEcritureComptablesTests,checkIsEcritureComptableExistNotTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:51.350
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest$ComptabiliteManagerImplMockTestCheckEcritureComptablesTests,checkIsEcritureComptableExistNotTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:51.352
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest$ComptabiliteManagerImplMockTestCheckEcritureComptablesTests,checkIsJournalAndCompteComptableExistCompteTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:51.369
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest$ComptabiliteManagerImplMockTestCheckEcritureComptablesTests,checkIsJournalAndCompteComptableExistCompteTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:51.372
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest$ComptabiliteManagerImplMockTestCheckEcritureComptablesTests,checkIsEcritureComptableExistTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:51.381
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest$ComptabiliteManagerImplMockTestCheckEcritureComptablesTests,checkIsEcritureComptableExistTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:51.386
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest$ComptabiliteManagerImplMockTestCheckEcritureComptablesTests,checkEcritureComptableCheckEcritureComptableContextTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:51.399
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest$ComptabiliteManagerImplMockTestCheckEcritureComptablesTests,checkEcritureComptableCheckEcritureComptableContextTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:51.405
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest$ComptabiliteManagerImplMockTestCheckEcritureComptablesTests,checkEcritureComptableTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:51.415
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest$ComptabiliteManagerImplMockTestCheckEcritureComptablesTests,checkEcritureComptableTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:51.417
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest$ComptabiliteManagerImplMockTestCheckEcritureComptablesTests,checkEcritureComptableContextDefaultIdTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:51.426
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest$ComptabiliteManagerImplMockTestCheckEcritureComptablesTests,checkEcritureComptableContextDefaultIdTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:51.429
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest$ComptabiliteManagerImplMockTestCheckEcritureComptablesTests,checkEcritureComptableContextNoDefaultIdAndEqualsTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:51.450
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest$ComptabiliteManagerImplMockTestCheckEcritureComptablesTests,checkEcritureComptableContextNoDefaultIdAndEqualsTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:51.455
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest$ComptabiliteManagerImplMockTestCheckEcritureComptablesTests,checkIsJournalAndCompteComptableExistTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:51.472
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest$ComptabiliteManagerImplMockTestCheckEcritureComptablesTests,checkIsJournalAndCompteComptableExistTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:51.477
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest$ComptabiliteManagerImplMockTestCheckEcritureComptablesTests,checkEcritureComptableCheckIsJournalAndCompteComptableExistTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:51.487
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest$ComptabiliteManagerImplMockTestCheckEcritureComptablesTests,checkEcritureComptableCheckIsJournalAndCompteComptableExistTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:51.491
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest$ComptabiliteManagerImplMockTestCheckEcritureComptablesTests,checkEcritureComptableContextNullRefTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:51.504
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest$ComptabiliteManagerImplMockTestCheckEcritureComptablesTests,checkEcritureComptableContextNullRefTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:51.510
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest$ComptabiliteManagerImplMockTestCRUDTest,updateTestFailNotFoundException,null,null,null
+
+
+# Created at 2021-07-14T16:24:51.528
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest$ComptabiliteManagerImplMockTestCRUDTest,updateTestFailNotFoundException,null,null,null
+
+
+# Created at 2021-07-14T16:24:51.530
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest$ComptabiliteManagerImplMockTestCRUDTest,InsertTestFailNotFoundException,null,null,null
+
+
+# Created at 2021-07-14T16:24:51.544
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest$ComptabiliteManagerImplMockTestCRUDTest,InsertTestFailNotFoundException,null,null,null
+
+
+# Created at 2021-07-14T16:24:51.549
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest$ComptabiliteManagerImplMockTestCRUDTest,updateTestFailFunctionalException,null,null,null
+
+
+# Created at 2021-07-14T16:24:52.034
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest$ComptabiliteManagerImplMockTestCRUDTest,updateTestFailFunctionalException,null,null,null
+
+
+# Created at 2021-07-14T16:24:52.036
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest$ComptabiliteManagerImplMockTestCRUDTest,updateSequenceEcritureComptableTestPass,null,null,null
+
+
+# Created at 2021-07-14T16:24:52.047
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest$ComptabiliteManagerImplMockTestCRUDTest,updateSequenceEcritureComptableTestPass,null,null,null
+
+
+# Created at 2021-07-14T16:24:52.050
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest$ComptabiliteManagerImplMockTestCRUDTest,updateTestPass,null,null,null
+
+
+# Created at 2021-07-14T16:24:52.057
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest$ComptabiliteManagerImplMockTestCRUDTest,updateTestPass,null,null,null
+
+
+# Created at 2021-07-14T16:24:52.059
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest$ComptabiliteManagerImplMockTestCRUDTest,insertTestPass,null,null,null
+
+
+# Created at 2021-07-14T16:24:52.066
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest$ComptabiliteManagerImplMockTestCRUDTest,insertTestPass,null,null,null
+
+
+# Created at 2021-07-14T16:24:52.068
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest$ComptabiliteManagerImplMockTestCRUDTest,InsertTestFailFunctionalException,null,null,null
+
+
+# Created at 2021-07-14T16:24:52.077
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest$ComptabiliteManagerImplMockTestCRUDTest,InsertTestFailFunctionalException,null,null,null
+
+
+# Created at 2021-07-14T16:24:52.081
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest$ComptabiliteManagerImplMockTestCRUDTest,deleteTestPass,null,null,null
+
+
+# Created at 2021-07-14T16:24:52.090
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest$ComptabiliteManagerImplMockTestCRUDTest,deleteTestPass,null,null,null
+
+
+# Created at 2021-07-14T16:24:52.091
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest$ComptabiliteManagerImplMockTestCRUDTest,insertSequenceEcritureComptableTestPass,null,null,null
+
+
+# Created at 2021-07-14T16:24:52.098
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest$ComptabiliteManagerImplMockTestCRUDTest,insertSequenceEcritureComptableTestPass,null,null,null
+
+
+# Created at 2021-07-14T16:24:52.099
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest,ecritureComptableIsEquilibreeTrue,null,null,null
+
+
+# Created at 2021-07-14T16:24:52.104
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest,ecritureComptableIsEquilibreeTrue,null,null,null
+
+
+# Created at 2021-07-14T16:24:52.107
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest,ecitureComptableIdValueNotDefaultCheckFail,null,null,null
+
+
+# Created at 2021-07-14T16:24:52.118
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest,ecitureComptableIdValueNotDefaultCheckFail,null,null,null
+
+
+# Created at 2021-07-14T16:24:52.177
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest,ecitureComptableIdValueNotDefaultCheckPass{int}[1],null,null,null
+
+
+# Created at 2021-07-14T16:24:52.271
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest,ecitureComptableIdValueNotDefaultCheckPass{int}[1],null,null,null
+
+
+# Created at 2021-07-14T16:24:52.278
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest,ecitureComptableIdValueNotDefaultCheckPass{int}[2],null,null,null
+
+
+# Created at 2021-07-14T16:24:52.282
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest,ecitureComptableIdValueNotDefaultCheckPass{int}[2],null,null,null
+
+
+# Created at 2021-07-14T16:24:52.287
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest,ecitureComptableIdValueNotDefaultCheckPass{int}[3],null,null,null
+
+
+# Created at 2021-07-14T16:24:52.295
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest,ecitureComptableIdValueNotDefaultCheckPass{int}[3],null,null,null
+
+
+# Created at 2021-07-14T16:24:52.298
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest,ecritureComptableIsEquilibreeFalse,null,null,null
+
+
+# Created at 2021-07-14T16:24:52.304
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest,ecritureComptableIsEquilibreeFalse,null,null,null
+
+
+# Created at 2021-07-14T16:24:52.306
+Unexpected IOException: 2,1,org.apache.maven.surefire.junitplatform.JUnitPlatformProvider,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplMockTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:52.308
+Unexpected IOException: 1,1,org.apache.maven.surefire.junitplatform.JUnitPlatformProvider,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:52.317
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test$LigneEcritureComptableTest,ligneEcritureComptableMontantComptableKoTest{String}[1],null,null,null
+
+
+# Created at 2021-07-14T16:24:52.373
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test$LigneEcritureComptableTest,ligneEcritureComptableMontantComptableKoTest{String}[1],null,null,null
+
+
+# Created at 2021-07-14T16:24:52.376
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test$LigneEcritureComptableTest,ligneEcritureComptableMontantComptableKoTest{String}[2],null,null,null
+
+
+# Created at 2021-07-14T16:24:52.415
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test$LigneEcritureComptableTest,ligneEcritureComptableMontantComptableKoTest{String}[2],null,null,null
+
+
+# Created at 2021-07-14T16:24:52.419
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test$LigneEcritureComptableTest,ligneEcritureComptableMontantComptableOkTest{String}[1],null,null,null
+
+
+# Created at 2021-07-14T16:24:52.451
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test$LigneEcritureComptableTest,ligneEcritureComptableMontantComptableOkTest{String}[1],null,null,null
+
+
+# Created at 2021-07-14T16:24:52.454
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test$LigneEcritureComptableTest,ligneEcritureComptableMontantComptableOkTest{String}[2],null,null,null
+
+
+# Created at 2021-07-14T16:24:52.489
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test$LigneEcritureComptableTest,ligneEcritureComptableMontantComptableOkTest{String}[2],null,null,null
+
+
+# Created at 2021-07-14T16:24:52.494
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test$LigneEcritureComptableTest,ligneEcritureComptableLibelleSizeKoTest{int}[1],null,null,null
+
+
+# Created at 2021-07-14T16:24:52.533
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test$LigneEcritureComptableTest,ligneEcritureComptableLibelleSizeKoTest{int}[1],null,null,null
+
+
+# Created at 2021-07-14T16:24:52.537
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test$LigneEcritureComptableTest,ligneEcritureComptableLibelleSizeKoTest{int}[2],null,null,null
+
+
+# Created at 2021-07-14T16:24:52.570
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test$LigneEcritureComptableTest,ligneEcritureComptableLibelleSizeKoTest{int}[2],null,null,null
+
+
+# Created at 2021-07-14T16:24:52.573
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test$LigneEcritureComptableTest,ligneEcritureComptableLibelleSizeKoTest{int}[3],null,null,null
+
+
+# Created at 2021-07-14T16:24:52.598
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test$LigneEcritureComptableTest,ligneEcritureComptableLibelleSizeKoTest{int}[3],null,null,null
+
+
+# Created at 2021-07-14T16:24:52.603
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test$LigneEcritureComptableTest,ligneEcritureComptableLibelleSizeOkTest{int}[1],null,null,null
+
+
+# Created at 2021-07-14T16:24:52.616
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test$LigneEcritureComptableTest,ligneEcritureComptableLibelleSizeOkTest{int}[1],null,null,null
+
+
+# Created at 2021-07-14T16:24:52.619
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test$LigneEcritureComptableTest,ligneEcritureComptableLibelleSizeOkTest{int}[2],null,null,null
+
+
+# Created at 2021-07-14T16:24:52.629
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test$LigneEcritureComptableTest,ligneEcritureComptableLibelleSizeOkTest{int}[2],null,null,null
+
+
+# Created at 2021-07-14T16:24:52.631
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test$LigneEcritureComptableTest,ligneEcritureComptableLibelleSizeOkTest{int}[3],null,null,null
+
+
+# Created at 2021-07-14T16:24:52.647
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test$LigneEcritureComptableTest,ligneEcritureComptableLibelleSizeOkTest{int}[3],null,null,null
+
+
+# Created at 2021-07-14T16:24:52.649
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test$LigneEcritureComptableTest,ligneEcritureComptableLibelleNull,null,null,null
+
+
+# Created at 2021-07-14T16:24:52.660
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test$LigneEcritureComptableTest,ligneEcritureComptableLibelleNull,null,null,null
+
+
+# Created at 2021-07-14T16:24:52.666
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test$RGCompta0EcritureComptableLibelleTest,libelleSizeKoTest{int}[1],null,null,null
+
+
+# Created at 2021-07-14T16:24:52.688
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test$RGCompta0EcritureComptableLibelleTest,libelleSizeKoTest{int}[1],null,null,null
+
+
+# Created at 2021-07-14T16:24:52.691
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test$RGCompta0EcritureComptableLibelleTest,libelleSizeKoTest{int}[2],null,null,null
+
+
+# Created at 2021-07-14T16:24:52.722
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test$RGCompta0EcritureComptableLibelleTest,libelleSizeKoTest{int}[2],null,null,null
+
+
+# Created at 2021-07-14T16:24:52.738
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test$RGCompta0EcritureComptableLibelleTest,libelleSizeKoTest{int}[3],null,null,null
+
+
+# Created at 2021-07-14T16:24:52.784
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test$RGCompta0EcritureComptableLibelleTest,libelleSizeKoTest{int}[3],null,null,null
+
+
+# Created at 2021-07-14T16:24:52.789
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test$RGCompta0EcritureComptableLibelleTest,libelleSizeOkTest{int}[1],null,null,null
+
+
+# Created at 2021-07-14T16:24:52.822
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test$RGCompta0EcritureComptableLibelleTest,libelleSizeOkTest{int}[1],null,null,null
+
+
+# Created at 2021-07-14T16:24:52.829
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test$RGCompta0EcritureComptableLibelleTest,libelleSizeOkTest{int}[2],null,null,null
+
+
+# Created at 2021-07-14T16:24:52.860
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test$RGCompta0EcritureComptableLibelleTest,libelleSizeOkTest{int}[2],null,null,null
+
+
+# Created at 2021-07-14T16:24:52.865
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test$RGCompta0EcritureComptableLibelleTest,libelleSizeOkTest{int}[3],null,null,null
+
+
+# Created at 2021-07-14T16:24:52.900
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test$RGCompta0EcritureComptableLibelleTest,libelleSizeOkTest{int}[3],null,null,null
+
+
+# Created at 2021-07-14T16:24:52.905
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test$RGCompta0EcritureComptableLibelleTest,libelleNullTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:52.944
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test$RGCompta0EcritureComptableLibelleTest,libelleNullTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:52.947
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test,idTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:52.977
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test,idTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:52.988
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test,referenceRegexTest{String}[1],null,null,null
+
+
+# Created at 2021-07-14T16:24:53.016
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test,referenceRegexTest{String}[1],null,null,null
+
+
+# Created at 2021-07-14T16:24:53.019
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test,referenceRegexTest{String}[2],null,null,null
+
+
+# Created at 2021-07-14T16:24:53.049
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test,referenceRegexTest{String}[2],null,null,null
+
+
+# Created at 2021-07-14T16:24:53.055
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test,referenceRegexTest{String}[3],null,null,null
+
+
+# Created at 2021-07-14T16:24:53.088
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test,referenceRegexTest{String}[3],null,null,null
+
+
+# Created at 2021-07-14T16:24:53.091
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test,referenceRegexTest{String}[4],null,null,null
+
+
+# Created at 2021-07-14T16:24:53.136
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test,referenceRegexTest{String}[4],null,null,null
+
+
+# Created at 2021-07-14T16:24:53.138
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test,referenceRegexTest{String}[5],null,null,null
+
+
+# Created at 2021-07-14T16:24:53.170
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test,referenceRegexTest{String}[5],null,null,null
+
+
+# Created at 2021-07-14T16:24:53.175
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test,referenceRegexTest{String}[6],null,null,null
+
+
+# Created at 2021-07-14T16:24:53.203
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test,referenceRegexTest{String}[6],null,null,null
+
+
+# Created at 2021-07-14T16:24:53.207
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test,dateNullTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.236
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test,dateNullTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.240
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test,listSizeZeroTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.261
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test,listSizeZeroTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.265
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test,journalNullTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.299
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test,journalNullTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.301
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test,ConstrainsKoTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.329
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test,ConstrainsKoTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.332
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test,ConstrainsOkTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.361
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test,ConstrainsOkTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.365
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test,listSizeOneTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.396
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestCheckRGCompta0Test,listSizeOneTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.407
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestMethodsTest,journalComptableNotFoundTest{String}[1],null,null,null
+
+
+# Created at 2021-07-14T16:24:53.475
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestMethodsTest,journalComptableNotFoundTest{String}[1],null,null,null
+
+
+# Created at 2021-07-14T16:24:53.478
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestMethodsTest,journalComptableNotFoundTest{String}[2],null,null,null
+
+
+# Created at 2021-07-14T16:24:53.480
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestMethodsTest,journalComptableNotFoundTest{String}[2],null,null,null
+
+
+# Created at 2021-07-14T16:24:53.485
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestMethodsTest,ecritureComptableFoundTest{int}[1],null,null,null
+
+
+# Created at 2021-07-14T16:24:53.487
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestMethodsTest,ecritureComptableFoundTest{int}[1],null,null,null
+
+
+# Created at 2021-07-14T16:24:53.489
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestMethodsTest,ecritureComptableFoundTest{int}[2],null,null,null
+
+
+# Created at 2021-07-14T16:24:53.491
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestMethodsTest,ecritureComptableFoundTest{int}[2],null,null,null
+
+
+# Created at 2021-07-14T16:24:53.494
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestMethodsTest,createEcritureComptableReferenceTestFail,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.497
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestMethodsTest,createEcritureComptableReferenceTestFail,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.499
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestMethodsTest,createEcritureComptableReferenceTestPass,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.501
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestMethodsTest,createEcritureComptableReferenceTestPass,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.504
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestMethodsTest,setEcritureComptableReferenceTestFail,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.509
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestMethodsTest,setEcritureComptableReferenceTestFail,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.512
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestMethodsTest,setEcritureComptableReferenceTestPass,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.518
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestMethodsTest,setEcritureComptableReferenceTestPass,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.520
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestMethodsTest,compteComptableFoundTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.576
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestMethodsTest,compteComptableFoundTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.578
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestMethodsTest,createEcritureComptableReferenceDateNullTestFail,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.582
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestMethodsTest,createEcritureComptableReferenceDateNullTestFail,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.585
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestMethodsTest,referenceNumberFormatTestFail,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.588
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestMethodsTest,referenceNumberFormatTestFail,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.591
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestMethodsTest,referenceNumberFormatTestPass{int}[1],null,null,null
+
+
+# Created at 2021-07-14T16:24:53.598
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestMethodsTest,referenceNumberFormatTestPass{int}[1],null,null,null
+
+
+# Created at 2021-07-14T16:24:53.601
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestMethodsTest,referenceNumberFormatTestPass{int}[2],null,null,null
+
+
+# Created at 2021-07-14T16:24:53.605
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestMethodsTest,referenceNumberFormatTestPass{int}[2],null,null,null
+
+
+# Created at 2021-07-14T16:24:53.612
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestMethodsTest,referenceNumberFormatTestPass{int}[3],null,null,null
+
+
+# Created at 2021-07-14T16:24:53.619
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestMethodsTest,referenceNumberFormatTestPass{int}[3],null,null,null
+
+
+# Created at 2021-07-14T16:24:53.623
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestMethodsTest,referenceNumberFormatTestPass{int}[4],null,null,null
+
+
+# Created at 2021-07-14T16:24:53.628
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestMethodsTest,referenceNumberFormatTestPass{int}[4],null,null,null
+
+
+# Created at 2021-07-14T16:24:53.630
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestMethodsTest,getYearNullDateTestPass,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.637
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestMethodsTest,getYearNullDateTestPass,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.639
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestMethodsTest,setEcritureComptableReferenceDateNullTestFail,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.644
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestMethodsTest,setEcritureComptableReferenceDateNullTestFail,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.647
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestMethodsTest,journalComptableFoundTest{String}[1],null,null,null
+
+
+# Created at 2021-07-14T16:24:53.651
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestMethodsTest,journalComptableFoundTest{String}[1],null,null,null
+
+
+# Created at 2021-07-14T16:24:53.658
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestMethodsTest,journalComptableFoundTest{String}[2],null,null,null
+
+
+# Created at 2021-07-14T16:24:53.664
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestMethodsTest,journalComptableFoundTest{String}[2],null,null,null
+
+
+# Created at 2021-07-14T16:24:53.666
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestMethodsTest,parseDateToStringNullDateTestPass,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.669
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestMethodsTest,parseDateToStringNullDateTestPass,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.670
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestMethodsTest,createSequenceEcritureComptableDateNullTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.745
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestMethodsTest,createSequenceEcritureComptableDateNullTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.747
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestMethodsTest,getYearTestPass,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.750
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestMethodsTest,getYearTestPass,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.770
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestMethodsTest,ecritureComptableNotFoundTest{int}[1],null,null,null
+
+
+# Created at 2021-07-14T16:24:53.774
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestMethodsTest,ecritureComptableNotFoundTest{int}[1],null,null,null
+
+
+# Created at 2021-07-14T16:24:53.777
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestMethodsTest,ecritureComptableNotFoundTest{int}[2],null,null,null
+
+
+# Created at 2021-07-14T16:24:53.779
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestMethodsTest,ecritureComptableNotFoundTest{int}[2],null,null,null
+
+
+# Created at 2021-07-14T16:24:53.783
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestMethodsTest,addTheNewLastValueToSequenceEcritureComptableTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.789
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestMethodsTest,addTheNewLastValueToSequenceEcritureComptableTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.790
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestMethodsTest,createSequenceEcritureComptableTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.796
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestMethodsTest,createSequenceEcritureComptableTest,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.797
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestMethodsTest,parseDateToStringTestPass,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.800
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestMethodsTest,parseDateToStringTestPass,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.805
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestMethodsTest,compteComptableNotFoundTest{int}[1],null,null,null
+
+
+# Created at 2021-07-14T16:24:53.812
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestMethodsTest,compteComptableNotFoundTest{int}[1],null,null,null
+
+
+# Created at 2021-07-14T16:24:53.816
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestMethodsTest,compteComptableNotFoundTest{int}[2],null,null,null
+
+
+# Created at 2021-07-14T16:24:53.819
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestMethodsTest,compteComptableNotFoundTest{int}[2],null,null,null
+
+
+# Created at 2021-07-14T16:24:53.826
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestRGComptaTest,atLeastOneDebitAndOneCreditTestFailZero,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.831
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestRGComptaTest,atLeastOneDebitAndOneCreditTestFailZero,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.835
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestRGComptaTest,checkReferenceJournalCodeTestFail,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.837
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestRGComptaTest,checkReferenceJournalCodeTestFail,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.838
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestRGComptaTest,checkReferenceJournalCodeTestPass,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.840
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestRGComptaTest,checkReferenceJournalCodeTestPass,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.843
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestRGComptaTest,checkReferenceDateTestFail,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.847
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestRGComptaTest,checkReferenceDateTestFail,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.849
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestRGComptaTest,checkReferenceDateTestPass,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.851
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestRGComptaTest,checkReferenceDateTestPass,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.854
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestRGComptaTest,isListLigneEcritureSizePassFailNoDebit,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.870
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestRGComptaTest,isListLigneEcritureSizePassFailNoDebit,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.871
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestRGComptaTest,isListLigneEcritureSizePassTestPass,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.874
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestRGComptaTest,isListLigneEcritureSizePassTestPass,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.877
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestRGComptaTest,checkRGCompta3TestFail{int}[1],null,null,null
+
+
+# Created at 2021-07-14T16:24:53.891
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestRGComptaTest,checkRGCompta3TestFail{int}[1],null,null,null
+
+
+# Created at 2021-07-14T16:24:53.894
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestRGComptaTest,checkRGCompta3TestFail{int}[2],null,null,null
+
+
+# Created at 2021-07-14T16:24:53.909
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestRGComptaTest,checkRGCompta3TestFail{int}[2],null,null,null
+
+
+# Created at 2021-07-14T16:24:53.915
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestRGComptaTest,checkRGCompta3TestPass,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.919
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestRGComptaTest,checkRGCompta3TestPass,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.921
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestRGComptaTest,isListLigneEcritureSizePassFailNoCredit,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.924
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestRGComptaTest,isListLigneEcritureSizePassFailNoCredit,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.925
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestRGComptaTest,isListLigneEcritureSizePassTestFailZero,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.927
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestRGComptaTest,isListLigneEcritureSizePassTestFailZero,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.933
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestRGComptaTest,checkRGCompta5TestFail{String}[1],null,null,null
+
+
+# Created at 2021-07-14T16:24:53.949
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestRGComptaTest,checkRGCompta5TestFail{String}[1],null,null,null
+
+
+# Created at 2021-07-14T16:24:53.952
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestRGComptaTest,checkRGCompta5TestFail{String}[2],null,null,null
+
+
+# Created at 2021-07-14T16:24:53.964
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestRGComptaTest,checkRGCompta5TestFail{String}[2],null,null,null
+
+
+# Created at 2021-07-14T16:24:53.966
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestRGComptaTest,checkRGCompta5TestFail{String}[3],null,null,null
+
+
+# Created at 2021-07-14T16:24:53.978
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestRGComptaTest,checkRGCompta5TestFail{String}[3],null,null,null
+
+
+# Created at 2021-07-14T16:24:53.981
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestRGComptaTest,checkRGCompta5TestPass,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.985
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestRGComptaTest,checkRGCompta5TestPass,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.987
+Unexpected IOException: 5,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestRGComptaTest,isListLigneEcritureSizePassTestFailOne,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.990
+Unexpected IOException: 6,1,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest$ComptabiliteManagerImplTestRGComptaTest,isListLigneEcritureSizePassTestFailOne,null,null,null
+
+
+# Created at 2021-07-14T16:24:53.991
+Unexpected IOException: 2,1,org.apache.maven.surefire.junitplatform.JUnitPlatformProvider,com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest,null,null,null
+
+

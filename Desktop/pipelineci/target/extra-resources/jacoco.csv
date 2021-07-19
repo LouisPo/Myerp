@@ -1,0 +1,10 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+myerp-coverage/myerp-model,com.dummy.myerp.model.bean.comptabilite,LigneEcritureComptable,7,105,0,2,3,26,2,12,2,11
+myerp-coverage/myerp-model,com.dummy.myerp.model.bean.comptabilite,JournalComptable,91,79,21,7,26,21,15,9,4,6
+myerp-coverage/myerp-model,com.dummy.myerp.model.bean.comptabilite,SequenceEcritureComptable,80,107,21,9,22,28,18,8,3,8
+myerp-coverage/myerp-model,com.dummy.myerp.model.bean.comptabilite,EcritureComptable,3,214,2,6,1,50,3,19,1,17
+myerp-coverage/myerp-model,com.dummy.myerp.model.bean.comptabilite,CompteComptable,7,82,0,6,3,24,2,10,2,7
+myerp-coverage/myerp-business,com.dummy.myerp.business.impl.manager,ComptabiliteManagerImpl,13,712,5,53,3,175,4,67,0,42
+myerp-coverage/myerp-business,com.dummy.myerp.business.impl,BusinessProxyImpl,20,13,2,0,7,4,4,2,3,2
+myerp-coverage/myerp-business,com.dummy.myerp.business.impl,TransactionManager,32,8,4,0,13,3,7,2,5,2
+myerp-coverage/myerp-business,com.dummy.myerp.business.impl,AbstractBusinessManager,2,25,0,0,1,11,1,5,1,5

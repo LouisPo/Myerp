@@ -1,0 +1,5 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+myerp-business,com.dummy.myerp.business.impl.manager,ComptabiliteManagerImpl,13,712,5,53,3,175,4,67,0,42
+myerp-business,com.dummy.myerp.business.impl,BusinessProxyImpl,20,13,2,0,7,4,4,2,3,2
+myerp-business,com.dummy.myerp.business.impl,TransactionManager,32,8,4,0,13,3,7,2,5,2
+myerp-business,com.dummy.myerp.business.impl,AbstractBusinessManager,2,25,0,0,1,11,1,5,1,5
